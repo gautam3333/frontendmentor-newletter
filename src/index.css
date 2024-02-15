@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid_box {
+  background-color: #fff;
+  border-radius: 2rem;
+  display: grid;
+  padding: 2rem;
+}
+
+.image_cover_desktop {
+  display: none;
+}
+
+.content_box {
+  max-width: 33rem;
+  padding: 2rem;
+  margin: auto 2rem;
+  transition: all 0.3s ease-in;
+}
+.content_box h1 {
+  color: #242742;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+}
+
+.content_box p {
+  color: #36384e;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.content_box ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.content_box ul li {
+  color: #242742;
+  font-size: 1.2rem;
+  background-image: url('../images/icon-list.svg');
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: left center;
+  background-size: 1.2rem;
+  padding-left: 2rem;
+}
+
+.content_box ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.email_box label {
+  color: #242742;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.email_box input {
+  border: none;
+  border: 1px solid #9294a0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.email_box input::placeholder {
+  font-family: inherit;
+  color: #36384e;
+}
+
+.email_box input:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+.email_box_label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email_box .error_email {
+  color: #ff6257;
+}
+
+.email_box button {
+  border: none;
+  background-color: #242742;
+  border-radius: 4px;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.email_box button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #ff6257, #fdba74);
+}
+
+/* css for thank you component */
+.thankyou_box {
+  background-color: #ffffff;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.thankyou_box img {
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+
+.thankyou_box h1 {
+  color: #242742;
+  font-family: inherit;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.thankyou_box p {
+  color: #36384e;
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.thankyou_box span {
+  color: #242742;
+  font-weight: 700;
+}
+
+.thankyou_box button {
+  border: none;
+  background-color: #242742;
+  border-radius: 4px;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-top: 8rem;
+}
+
+.thankyou_box button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #ff6257, #fdba74);
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    background-color: #36384e;
+  }
+  .image_cover_mobile {
+    display: none;
+  }
+
+  .image_cover_desktop {
+    display: block;
+  }
+
+  .grid_box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image_cover_box {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  /* css for thank you component*/
+  .thankyou_box {
+    border-radius: 2rem;
+  }
+
+  .thankyou_box button {
+    margin-top: 0;
+  }
+}
