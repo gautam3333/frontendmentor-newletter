@@ -22,7 +22,7 @@ body {
   background-color: #fff;
   border-radius: 2rem;
   display: grid;
-  padding: 2rem;
+  gap: 2rem;
 }
 
 .image_cover_desktop {
@@ -31,8 +31,6 @@ body {
 
 .content_box {
   max-width: 33rem;
-  padding: 2rem;
-  margin: auto 2rem;
   transition: all 0.3s ease-in;
 }
 .content_box h1 {
@@ -187,6 +185,10 @@ body {
 
   .grid_box {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content_box {
+    margin: auto;
   }
 
   .image_cover_box {
